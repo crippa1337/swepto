@@ -5,11 +5,16 @@ const TILE_SIZE: f32 = 30.0;
 pub struct Tile {
     pub x: f32,
     pub y: f32,
+    pub bomb: bool,
 }
 
 impl Tile {
     pub fn new() -> Tile {
-        Tile { x: 0.0, y: 0.0 }
+        Tile {
+            x: 0.0,
+            y: 0.0,
+            bomb: false,
+        }
     }
 
     pub fn draw(&self) {
